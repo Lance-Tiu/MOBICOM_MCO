@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Current Balance -->
+        <TextView
+            android:id="@+id/text_screenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--Dashboard--"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_balance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Balance"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_balance_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₱5,000"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Add Transaction Button -->
+        <Button
+            android:id="@+id/btn_addTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Add Transaction"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Savings Goal -->
+        <TextView
+            android:id="@+id/text_savingGoal_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Savings Goal Progress"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/savingGoal_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="60"
+            android:max="100"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/text_savings_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₱3,000 / ₱5,000"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Upcoming Bills -->
+        <TextView
+            android:id="@+id/text_upcomingBills_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Bills"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_billPlaceholder_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="#EEEEEE"
+                android:padding="8dp"
+                android:text="📅 Rent – Due June 25" />
+
+            <TextView
+                android:id="@+id/text_billPlaceholder_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EEEEEE"
+                android:padding="8dp"
+                android:text="📅 Spotify – Due June 28" />
+        </LinearLayout>
+
+        <!-- Navigation Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_addExpense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add Expense"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btn_addIncome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add Income"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_savingGoal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Savings Goals"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btn_captureReceipt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Capture Receipt"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_billReminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bill Reminders" />
+    </LinearLayout>
+</ScrollView>
